@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { usePandemicContext } from "../../context/PandemicContext";
 import Upgrade from "../Upgrade/Upgrade";
+import numAbb from "../../utils/numberAbbreviate";
 
 function Game() {
   const [state, dispatch] = usePandemicContext();
@@ -24,9 +25,9 @@ function Game() {
 
   return (
     <div className="container">
-      <div>Infected: {state.status.infected}</div>
-      <div>Deaths: {state.status.death}</div>
-      <div>Fund: {state.status.fund}</div>
+      <div>Infected: {numAbb(state.status.infected)}</div>
+      <div>Deaths: {numAbb(state.status.death)}</div>
+      <div>Fund: {numAbb(state.status.fund)}</div>
 
 
       <button
