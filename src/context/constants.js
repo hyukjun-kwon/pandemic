@@ -1,4 +1,5 @@
 const INITIAL_STATE = {
+  isComplete: false,
   difficulty: "easy",
   status: {
     infected: 5000,
@@ -44,19 +45,15 @@ const INITIAL_STATE = {
 }
 
 const MEDIUM_DIFFICULTY = {
-  status: {
-    infected: 25000,
-    death: 0,
-    fund: 2500
-  }
+  infected: 25000,
+  death: 0,
+  fund: 2500
 };
 
 const HARD_DIFFICULTY = {
-  status: {
-    infected: 50000,
-    death: 0,
-    fund: 0
-  }
+  infected: 50000,
+  death: 0,
+  fund: 0
 };
 
 // Array of clicker effects

@@ -1,7 +1,7 @@
 import React from "react";
 import { usePandemicContext } from "../../context/PandemicContext";
 
-function Pharmacy() {
+function Laboratory() {
   const [state, dispatch] = usePandemicContext();
 
   return (
@@ -9,18 +9,18 @@ function Pharmacy() {
         <div className="col-sm-4">
           <button
             className="btn btn-success mt-5 mb-5"
-            onClick={() => dispatch({ type: "LABORATORY_LEVEL_UP" })}
+            onClick={() => dispatch({ type: "PHARMACY_LEVEL_UP" })}
           >
-            Pharmacy Upgrade
+            Laboratory Upgrade
           </button>
         </div>
         <div className="col-sm-8">
-          <p>Pharmacy Level: {state.pharmacy.level}</p>
-          <p>Cures {state.pharmacy.effect} per 15 seconds</p>
-          <p>Receive ${state.pharmacy.profit} per cure</p>
+          <p>Pharmacy Level: {state.laboratory.level}</p>
+          <p>Cures {state.laboratory.effect} per 30 seconds</p>
+          <p>Receive ${state.laboratory.profit} per cure</p>
         </div>
       </div>
   );
 }
 
-export default Pharmacy;
+export default Laboratory;
