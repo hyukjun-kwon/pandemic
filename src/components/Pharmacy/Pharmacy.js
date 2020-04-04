@@ -9,7 +9,7 @@ function Pharmacy() {
         <div className="col-sm-4">
           <button
             className="btn btn-success mt-5 mb-5"
-            onClick={() => dispatch({ type: "LABORATORY_LEVEL_UP" })}
+            onClick={() => dispatch({ type: "PHARMACY_LEVEL_UP" })}
           >
             Pharmacy Upgrade
           </button>

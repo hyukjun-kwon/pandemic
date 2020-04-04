@@ -33,8 +33,15 @@ const reducer = (state, action) => {
       status: HARD_DIFFICULTY
     };
 
-  // When called, increase the status.infected by rates.spreadRate
+  
   case "TICK":
+    //
+    // SUMMARY:
+    // on every tick, the infection will spread
+    // on every 5 ticks, the pharmacy will cure people
+    // on every 10 ticks, the laboratory will cure people
+    // on every 15 ticks, people will die from the infection
+    //
     tickCount++;
     if(state.isComplete) {
       return {
@@ -159,7 +166,7 @@ const reducer = (state, action) => {
       ...state,
       isComplete: true
     }
-    
+
   default:
     throw new Error(`Invalid action type: ${action.type}`);
   }

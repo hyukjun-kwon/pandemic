@@ -1,5 +1,8 @@
 const INITIAL_STATE = {
+  // is the game finished
   isComplete: false,
+  // win? lost?
+  won: false,
   difficulty: "easy",
   status: {
     infected: 5000,
@@ -14,6 +17,7 @@ const INITIAL_STATE = {
   },
   // effect is number of cures per click
   // profit is how much "fund" it generates for each cure
+  // cost is how much $ it needs to upgrade to next level
   clicker: {
     level: 1,
     effect: 1,
@@ -74,7 +78,9 @@ const CLICKER_EFFECTS_ARRAY = [
   330000, 360000, 390000, 420000, 800000  // 51~55(max) levels
 ];
 
-const CLICKER_COSTS_ARRAY = [];
+const CLICKER_COSTS_ARRAY = [
+  5000, 7500, 10000, 12500, 15000
+];
 
 const PHARMACY_EFFECTS_ARRAY = [];
 

@@ -10,7 +10,11 @@ function Game() {
 
   if(state.status.infected === 0) {
     dispatch({ type: "WIN" });
-  }
+  };
+
+  if(state.status.infected >= 1000000000) {
+    dispatch({ type: "LOST" });
+  };
 
   useEffect(() => {
     const timer = setInterval(() => dispatch({ type: "TICK" }), 3000);
